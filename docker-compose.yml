@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+
+  nextresearch:
+    image: nginx:latest
+    ports:
+      - 443:443
+    volumes:
+      - ./certificates:/etc/nginx/certificates
+      - ./nextresearch.io.conf:/etc/nginx/conf.d/nextresearch.io.conf
+      - /var/www/html/artificates:/var/www/html/nextresearch.io
